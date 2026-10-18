@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Lock, Mail } from "lucide-react";
 import { navLinks } from "@/lib/data";
@@ -9,8 +10,14 @@ export default function Footer() {
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div>
             <div className="flex items-center gap-3">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-navy-600 font-serif text-lg font-bold text-white">
-                C
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white shadow-md ring-1 ring-white/30">
+                <Image
+                  src="/images/logo-mark.png"
+                  alt="Ceyteq logo"
+                  width={80}
+                  height={80}
+                  className="h-full w-full object-contain p-0.5"
+                />
               </span>
               <div className="leading-tight">
                 <p className="text-sm font-bold tracking-tight text-white">

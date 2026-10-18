@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Globe, Mail, Phone, Smartphone } from "lucide-react";
 import { ceyteq, socialLinks } from "@/lib/contact-data";
@@ -11,20 +12,17 @@ export default function ContactFooter() {
         <div className="grid gap-10 md:grid-cols-3">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-navy-600 font-serif text-lg font-bold text-white">
-                C
-              </span>
-              <div className="leading-tight">
-                <p className="text-sm font-bold tracking-tight text-white">
-                  {ceyteq.company}
-                </p>
-                <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-navy-300">
-                  {ceyteq.tagline}
-                </p>
-              </div>
+            <div className="w-fit max-w-full rounded-2xl bg-white px-5 py-3 shadow-lg ring-1 ring-white/40">
+              <Image
+                src="/images/logo.png"
+                alt="Ceyteq – Ceylon Technology · Empowering Digital Evolution"
+                width={1400}
+                height={603}
+                sizes="230px"
+                className="h-auto w-[230px]"
+              />
             </div>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed">
+            <p className="mt-5 max-w-xs text-sm leading-relaxed">
               Your all-in-one professional digital partner — web, marketing,
               advertising, printing, creative media, and AI/ERP solutions.
             </p>

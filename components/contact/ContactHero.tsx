@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Building2, ContactRound, Globe, Mail, Phone, Rocket, Send, Store } from "lucide-react";
 import { ceyteq, socialLinks } from "@/lib/contact-data";
 import { WhatsAppGlyph } from "./ContactHeader";
@@ -45,12 +46,25 @@ export default function ContactHero() {
       </div>
 
       <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-32 text-center md:px-8 md:pb-20 md:pt-40">
-        <div className="inline-flex items-center gap-2 rounded-full border border-navy-400/30 bg-navy-500/10 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-navy-200">
+        {/* Official logo lockup on a light plate (artwork is composed for light backgrounds) */}
+        <div className="mx-auto w-fit max-w-full rounded-3xl bg-white px-6 py-4 shadow-2xl shadow-black/50 ring-1 ring-white/60 sm:px-9 sm:py-5">
+          <Image
+            src="/images/logo.png"
+            alt="Ceyteq – Ceylon Technology · Empowering Digital Evolution"
+            width={1400}
+            height={603}
+            priority
+            sizes="(min-width: 640px) 400px, 300px"
+            className="h-auto w-[280px] sm:w-[400px]"
+          />
+        </div>
+
+        <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-navy-400/30 bg-navy-500/10 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-navy-200">
           <span className="h-1.5 w-1.5 rounded-full bg-navy-300" />
           {ceyteq.company}
         </div>
 
-        <h1 className="mx-auto mt-7 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+        <h1 className="mx-auto mt-6 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
           Get in Touch{" "}
           <span className="bg-gradient-to-r from-navy-200 via-navy-300 to-white bg-clip-text text-transparent">
             With Us

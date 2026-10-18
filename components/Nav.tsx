@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Mail, Menu, Printer, X } from "lucide-react";
 import { navLinks } from "@/lib/data";
@@ -57,8 +58,15 @@ export default function Nav() {
 
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
         <a href="#top" className="flex items-center gap-3">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-navy-600 font-serif text-lg font-bold text-white">
-            C
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white shadow-md ring-1 ring-white/30">
+            <Image
+              src="/images/logo-mark.png"
+              alt="Ceyteq logo"
+              width={80}
+              height={80}
+              priority
+              className="h-full w-full object-contain p-0.5"
+            />
           </span>
           <span className="leading-tight">
             <span className="block text-sm font-bold tracking-tight text-white">
