@@ -66,7 +66,7 @@ export default function Accept() {
     setSubmitted(true);
   };
 
-  const mailtoHref = `mailto:?subject=${encodeURIComponent(
+  const mailtoHref = `mailto:info.ceyteq@gmail.com?subject=${encodeURIComponent(
     "Proposal Accepted — Personal Brand & National PR Campaign"
   )}&body=${encodeURIComponent(
     `I, ${name}${company ? ` (${company})` : ""}, accept the Ceyteq Digital Solutions proposal "Personal Brand & National PR Campaign" (5-Pillar Framework) and authorize the team to begin Pillar 01: Research & Market Intelligence.\n\nName: ${name}\nEmail: ${email}\nCompany / Organization: ${company || "—"}\nDate of acceptance: ${today}`

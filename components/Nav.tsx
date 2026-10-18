@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowRight, Menu, Printer, X } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Mail, Menu, Printer, X } from "lucide-react";
 import { navLinks } from "@/lib/data";
 
 export default function Nav() {
@@ -86,6 +87,13 @@ export default function Nav() {
         </nav>
 
         <div className="hidden items-center gap-2 sm:flex">
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-1.5 rounded-full border border-white/20 px-3.5 py-2 text-[13px] font-medium text-slate-200 transition-colors hover:bg-white/10 hover:text-white"
+          >
+            <Mail className="h-3.5 w-3.5" />
+            Contact
+          </Link>
           <button
             type="button"
             onClick={() => window.print()}
@@ -120,6 +128,13 @@ export default function Nav() {
           aria-label="Mobile proposal sections"
         >
           <div className="grid gap-1">
+            <Link
+              href="/contact"
+              onClick={() => setOpen(false)}
+              className="flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-300 hover:bg-white/8"
+            >
+              <Mail className="h-4 w-4" /> Contact &amp; Social Hub
+            </Link>
             {navLinks.map((link) => (
               <a
                 key={link.href}

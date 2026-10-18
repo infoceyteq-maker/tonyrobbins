@@ -1,4 +1,5 @@
-import { Lock } from "lucide-react";
+import Link from "next/link";
+import { Lock, Mail } from "lucide-react";
 import { navLinks } from "@/lib/data";
 
 export default function Footer() {
@@ -43,6 +44,12 @@ export default function Footer() {
                 <a href="#accept" className="font-medium text-navy-300 transition-colors hover:text-white">
                   Accept Proposal
                 </a>
+              </li>
+              <li>
+                <Link href="/contact" className="inline-flex items-center gap-1.5 font-medium text-navy-300 transition-colors hover:text-white">
+                  <Mail className="h-3.5 w-3.5" />
+                  Contact &amp; Social Hub
+                </Link>
               </li>
             </ul>
           </nav>
